@@ -1,0 +1,264 @@
+button {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+select {
+  width: 220px;
+  height: 22px;
+  margin-right: 20px;
+}
+
+.array-container2 {
+  position: relative;
+  margin-top: 16%;
+  margin-bottom: 17%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#x {
+  border: 5px solid #0b132f;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 140px;
+  min-width: 140px;
+}
+
+#arrow {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doubly-linked-list {
+  width: 30px;
+  border: 0;
+  border-radius: 0;
+  background-color: #ffbf00;
+  color: transparent;
+  margin: 0 0px;
+  position: relative;
+  max-height: 660px;
+  color: #000000;
+  font-size: 1em;
+  width: 106px;
+  height: 62px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  border-right: 16px solid rgb(12, 53, 71);
+  border-left: 16px solid rgb(12, 53, 71);
+  margin-right: 50px;
+  z-index: 1;
+  transform-style: preserve-3d;
+  border-radius: 10%;
+  box-shadow: 5px 10px 10px #888888;
+}
+
+.p2 {
+  font-size: 20px;
+}
+
+
+.doubly-linked-list:not(:first-child):after {
+  content: "";
+  height: 2px;
+  background: black;
+  width: 49px;
+  position: absolute;
+  right: 90px;
+  top: 38%;
+  animation-name: visitedAnimationlnr;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.doubly-linked-list:not(:last-child):before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 39.2%;
+  border-style: solid;
+  border-width: 7px 15px 7px 0px;
+  border-color: transparent black transparent transparent;
+  right: -30px;
+  transform: translateY(-50%);
+  animation-name: visitedAnimationtrir;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.doubly-linked-list:not(:last-child) p:after {
+  content: "";
+  height: 2px;
+  background: black;
+  width: 59px;
+  position: absolute;
+  right: -59px;
+  top: 64%;
+  animation-name: visitedAnimationlnx;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.doubly-linked-list:not(:last-child) p:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 65.5%;
+  border-style: solid;
+  border-width: 7px 0 7px 15px;
+  border-color: transparent transparent transparent black;
+  right: -67px;
+  transform: translateY(-50%);
+  animation-name: visitedAnimationtrix;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+#sel1 {
+  width: 200px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn1 {
+  width: 200px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn2 {
+  width: 200px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn3 {
+  width: 100px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn4 {
+  width: 100px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#val {
+  width: 130px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  height: 37px;
+  border-radius: 0.4em;
+}
+
+#dval {
+  width: 130px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: 20px;
+  height: 37px;
+  border-radius: 1%;
+  border-radius: 0.4em;
+  margin-bottom: 10px;
+}
+
+
+.doubly-linked-list > p {
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-top: 20%;
+  padding-left: 4%;
+}
+
+@keyframes visitedAnimationln {
+  0% {
+    width: 10px;
+    right: -14px;
+  }
+
+  100% {
+    width: 55px;
+    right: -56px;
+  }
+}
+
+@keyframes visitedAnimationtri {
+  0% {
+    right: -30px;
+  }
+
+  100% {
+    right: -56px;
+  }
+}
+
+@keyframes visitedAnimationlnx {
+  0% {
+    width: 10px;
+    right: -10px;
+  }
+
+  100% {
+    width: 64px;
+    right: -64px;
+  }
+}
+
+@keyframes visitedAnimationtrix {
+  0% {
+    right: -20px;
+  }
+
+  100% {
+    right: -68px;
+  }
+}
+
+@keyframes visitedAnimationlnr {
+  0% {
+    width: 10px;
+    right: 89.7px;
+  }
+
+  100% {
+    width: 43px;
+    right: 89.7px;
+  }
+}
+
+@keyframes visitedAnimationtrir {
+  0% {
+    right: -69px;
+  }
+
+  100% {
+    right: -30px;
+  }
+}
+
+body {
+  background-color: #eeecec;
+  overflow: auto;
+}

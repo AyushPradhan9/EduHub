@@ -1,0 +1,234 @@
+button {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+select {
+  width: 220px;
+  height: 22px;
+  margin-right: 20px;
+}
+
+.array-container2 {
+  position: relative;
+  margin-top: 16%;
+  margin-bottom: 17%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.array2 {
+  background-color: #ffbf00;
+  color: transparent;
+  margin: 0 0px;
+  position: relative;
+  max-height: 660px;
+  color: #000000;
+  font-size: 1em;
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid rgb(12, 53, 71);
+  margin-right: 50px;
+  border-radius: 0%;
+  box-shadow: 5px 10px 10px #888888;
+}
+
+
+#x {
+  border: 5px solid #0b132f;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 140px;
+  min-width: 140px;
+}
+
+#arrow {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: black;
+  margin-left: 2px;
+}
+
+.p2 {
+  font-size: 20px;
+}
+
+.array2:not(:last-child):after {
+  content: "";
+  height: 2px;
+  background: black;
+  width: 55px;
+  position: absolute;
+  right: -56px;
+  top: 50%;
+  animation-name: visitedAnimationln;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.array2:not(:last-child):before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 51.2%;
+  border-style: solid;
+  border-width: 7px 0 7px 15px;
+  border-color: transparent transparent transparent black;
+  right: -57px;
+  transform: translateY(-50%);
+  animation-name: visitedAnimationtri;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+
+#sel1 {
+  width: 200px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+
+#btn1 {
+  width: 200px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn2 {
+  width: 200px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn3 {
+  width: 100px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#btn4 {
+  width: 100px;
+  margin-left: 10px;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: -3px;
+  height: 38px;
+}
+
+#val {
+  width: 130px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  height: 37px;
+  border-radius: 0.4em;
+}
+
+#dval {
+  width: 130px;
+  margin-left: 10px;
+  border: 2px solid rgb(12, 53, 71);
+  margin-top: 20px;
+  height: 37px;
+  border-radius: 1%;
+  border-radius: 0.4em;
+  margin-bottom: 10px;
+}
+
+.array2 > p {
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-top: 24%;
+}
+
+@keyframes visitedAnimationln {
+  0% {
+    width: 10px;
+    right: -14px;
+  }
+
+  100% {
+    width: 55px;
+    right: -56px;
+  }
+}
+
+@keyframes visitedAnimationtri {
+  0% {
+    right: -30px;
+  }
+
+  100% {
+    right: -56px;
+  }
+}
+
+@keyframes visitedAnimationlnx {
+  0% {
+    width: 10px;
+    right: -10px;
+  }
+
+  100% {
+    width: 64px;
+    right: -64px;
+  }
+}
+
+@keyframes visitedAnimationtrix {
+  0% {
+    right: -20px;
+  }
+
+  100% {
+    right: -68px;
+  }
+}
+
+@keyframes visitedAnimationlnr {
+  0% {
+    width: 10px;
+    right: 89.7px;
+  }
+
+  100% {
+    width: 43px;
+    right: 89.7px;
+  }
+}
+
+@keyframes visitedAnimationtrir {
+  0% {
+    right: -69px;
+  }
+
+  100% {
+    right: -30px;
+  }
+}
+
+body {
+  background-color: #eeecec;
+  overflow: auto;
+}

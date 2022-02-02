@@ -1,0 +1,55 @@
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-top: 90px;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 110px;
+}
+
+.page-header {
+  display: flex nowrap;
+  flex: 1;
+  flex-direction: column;
+  background-size: cover;
+  height: 200px;
+  padding: 40px;
+  color: black;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header-title {
+  flex: 1;
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: black;
+  font-family: " Tahoma ", sans-serif;
+}
+
+.content-sub {
+  flex: 1;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 15px;
+  font-style: italic;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 100%;
+}
+
+#intro {
+  flex: 1;
+  max-width: 70vw;
+  width: 100%;
+  overflow: hidden;
+}

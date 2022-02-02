@@ -1,0 +1,57 @@
+body {
+  background-color: #eeecec;
+}
+
+
+.shadow {
+  display: inline-block;
+  background: white;
+  box-shadow: 0 0 50px;
+  transition: 0.3s color;
+  color: #61dafb;
+  border-radius: 50%;
+}
+.topic {
+  text-align: center;
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 400%;
+  color: rgb(12, 53, 71);
+  font-style: italic;
+}
+
+.det {
+  margin: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+#btn {
+  margin-left: auto;
+  color: rgb(0, 0, 0);
+  border: #0f0e0e solid 1px;
+}
+#signup-btn {
+  margin-left: 15px;
+  background-color: #ffbf00;
+  border: #0f0e0e solid 1px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
