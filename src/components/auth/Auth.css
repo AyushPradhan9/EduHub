@@ -111,13 +111,6 @@ input.submit {
   background-color: #333333;
 }
 
-.login-options {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding-left: 60px;
-  padding-right: 50px;
-}
 /*Form positioning and animation */
 
 form#registerform {

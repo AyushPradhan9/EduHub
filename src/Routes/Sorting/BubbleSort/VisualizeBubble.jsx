@@ -37,6 +37,10 @@ export default class VisualizeBubble extends React.Component {
     this.resetArray();
   }
 
+  componentWillUnmount() {
+    this.resetArray();
+  }
+
   checkAll() {
     const arrayBar = document.getElementsByClassName("array-bar");
     for (let i = 0; i < arrayBar.length; ++i) {
@@ -151,7 +155,6 @@ export default class VisualizeBubble extends React.Component {
             min={4}
             max={20}
             id="slid1"
-            valueLabelDisplay="auto"
             disabled={this.state.disabled}
           />
           <a>Speed:</a>

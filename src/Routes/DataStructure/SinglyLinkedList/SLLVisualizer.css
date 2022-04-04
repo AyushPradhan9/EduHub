@@ -55,11 +55,9 @@ select {
   box-shadow: 5px 10px 10px #888888;
 }
 
-
 .p2 {
   font-size: 20px;
 }
-
 
 .linked-list:not(:last-child):after {
   content: "";
@@ -90,7 +88,6 @@ select {
   animation-timing-function: ease-out;
 }
 
-
 #sel1 {
   width: 200px;
   margin-left: 10px;
@@ -99,40 +96,22 @@ select {
   height: 38px;
 }
 
-
-#btn1 {
-  width: 200px;
-  margin-left: 10px;
+#dataBtn {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -3px;
   background-color: #ffbf00;
   border: 2px solid rgb(12, 53, 71);
-  margin-top: -3px;
   height: 38px;
 }
 
-#btn2 {
-  width: 200px;
-  margin-left: 10px;
-  background-color: #ffbf00;
-  border: 2px solid rgb(12, 53, 71);
+#dataMainBtn {
+  margin-left: 5px;
+  margin-right: 5px;
   margin-top: -3px;
-  height: 38px;
-}
-
-#btn3 {
-  width: 100px;
-  margin-left: 10px;
-  background-color: #ffbf00;
-  border: 2px solid rgb(12, 53, 71);
-  margin-top: -3px;
-  height: 38px;
-}
-
-#btn4 {
-  width: 100px;
-  margin-left: 10px;
-  background-color: #ffbf00;
-  border: 2px solid rgb(12, 53, 71);
-  margin-top: -3px;
+  color: white;
+  background-color: rgb(12, 53, 71);
+  border: 2px solid black;
   height: 38px;
 }
 

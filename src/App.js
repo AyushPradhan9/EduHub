@@ -2,41 +2,33 @@ import React, { useState } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import "./App.css";
 import Home from "./components/Home.js";
-import SignUp from './components/SignUp';
-import logo from "./assets/EduhubLogo.jpg";
-import {
-  Button,
-  AppBar,
-  Toolbar
-} from "@material-ui/core";
-import BubbleInfo from "./Routes/Sorting/BubbleSort/BubbleInfo";
-import CombInfo from "./Routes/Sorting/CombSort/CombInfo";
-import CycleInfo from "./Routes/Sorting/CycleSort/CycleInfo";
-import GnomeInfo from "./Routes/Sorting/GnomeSort/GnomeInfo";
-import HeapInfo from "./Routes/Sorting/HeapSort/HeapInfo";
-import InsertionInfo from "./Routes/Sorting/InsertionSort/InsertionInfo";
-import MergeInfo from "./Routes/Sorting/MergeSort/MergeInfo";
-import PigeonHoleInfo from "./Routes/Sorting/PigeonHoleSort/PigeonHoleInfo";
-import QuickInfo from "./Routes/Sorting/QuickSort/QuickInfo";
-import RadixInfo from "./Routes/Sorting/RadixSort/RadixInfo";
-import SelectionInfo from "./Routes/Sorting/SelectionSort/SelectionInfo";
-import ShellInfo from "./Routes/Sorting/ShellSort/ShellInfo";
-import AStarInfo from "./Routes/Pathfinding/AStar/AStarInfo";
-import BFSInfo from "./Routes/Pathfinding/BFS/BFSInfo";
-import DFSInfo from "./Routes/Pathfinding/DFS/DFSInfo";
-import DijkstraInfo from "./Routes/Pathfinding/Dijkstra/DijkstraInfo";
-import ArrayInfo from "./Routes/DataStructure/Array/ArrayInfo";
-import SSInfo from "./Routes/DataStructure/SortedSet/SSInfo";
-import USInfo from "./Routes/DataStructure/UnsortedSet/USInfo";
-import SLLInfo from "./Routes/DataStructure/SinglyLinkedList/SLLInfo";
-import DLLInfo from "./Routes/DataStructure/DoublyLinkedList/DLLInfo";
-import QueueInfo from "./Routes/DataStructure/Queue/QueueInfo";
+import Auth from './components/auth/Auth.js';
+import BubbleInfo from "./routes/Sorting/BubbleSort/BubbleInfo";
+import CombInfo from "./routes/Sorting/CombSort/CombInfo";
+import CycleInfo from "./routes/Sorting/CycleSort/CycleInfo";
+import GnomeInfo from "./routes/Sorting/GnomeSort/GnomeInfo";
+import HeapInfo from "./routes/Sorting/HeapSort/HeapInfo";
+import InsertionInfo from "./routes/Sorting/InsertionSort/InsertionInfo";
+import MergeInfo from "./routes/Sorting/MergeSort/MergeInfo";
+import PigeonHoleInfo from "./routes/Sorting/PigeonHoleSort/PigeonHoleInfo";
+import QuickInfo from "./routes/Sorting/QuickSort/QuickInfo";
+import RadixInfo from "./routes/Sorting/RadixSort/RadixInfo";
+import SelectionInfo from "./routes/Sorting/SelectionSort/SelectionInfo";
+import ShellInfo from "./routes/Sorting/ShellSort/ShellInfo";
+import AStarInfo from "./routes/Pathfinding/AStar/AStarInfo";
+import BFSInfo from "./routes/Pathfinding/BFS/BFSInfo";
+import DFSInfo from "./routes/Pathfinding/DFS/DFSInfo";
+import DijkstraInfo from "./routes/Pathfinding/Dijkstra/DijkstraInfo";
+import ArrayInfo from "./routes/DataStructure/Array/ArrayInfo";
+import SSInfo from "./routes/DataStructure/SortedSet/SSInfo";
+import USInfo from "./routes/DataStructure/UnsortedSet/USInfo";
+import SLLInfo from "./routes/DataStructure/SinglyLinkedList/SLLInfo";
+import DLLInfo from "./routes/DataStructure/DoublyLinkedList/DLLInfo";
+import QueueInfo from "./routes/DataStructure/Queue/QueueInfo";
 import { Route, Switch } from "react-router-dom";
 import Drawer from "./components/Drawer";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-
-import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
   container: {
@@ -75,38 +67,30 @@ export default function App() {
       <Drawer />
       <Switch>
         <Route exact from="/" component={Home} />
-        <Route exact from="/SignUp" component={SignUp} />
-        <Route exact path="/Routes/Sorting/BubbleSort/BubbleInfo" render={props => <BubbleInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/CombSort/CombInfo" render={props => <CombInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/CycleSort/CycleInfo" render={props => <CycleInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/GnomeSort/GnomeInfo" render={props => <GnomeInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/HeapSort/HeapInfo" render={props => <HeapInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/InsertionSort/InsertionInfo" render={props => <InsertionInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/MergeSort/MergeInfo" render={props => <MergeInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/PigeonHoleSort/PigeonHoleInfo" render={props => <PigeonHoleInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/QuickSort/QuickInfo" render={props => <QuickInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/RadixSort/RadixInfo" render={props => <RadixInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/SelectionSort/SelectionInfo" render={props => <SelectionInfo {...props} />} />
-        <Route exact path="/Routes/Sorting/ShellSort/ShellInfo" render={props => <ShellInfo {...props} />} />
-        <Route exact path="/Routes/Pathfinding/AStar/AStarInfo" render={props => <AStarInfo {...props} />} />
-        <Route exact path="/Routes/Pathfinding/BFS/BFSInfo" render={props => <BFSInfo {...props} />} />
-        <Route exact path="/Routes/Pathfinding/DFS/DFSInfo" render={props => <DFSInfo {...props} />} />
-        <Route exact path="/Routes/Pathfinding/Dijkstra/DijkstraInfo" render={props => <DijkstraInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/Array/ArrayInfo" render={props => <ArrayInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/SortedSet/SSInfo" render={props => <SSInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/UnsortedSet/USInfo" render={props => <USInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/SinglyLinkedList/SLLInfo" render={props => <SLLInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/DoublyLinkedList/DLLInfo" render={props => <DLLInfo {...props} />} />
-        <Route exact path="/Routes/DataStructure/Queue/QueueInfo" render={props => <QueueInfo {...props} />} />
+        <Route exact from="/Auth" component={Auth} />
+        <Route exact path="/Sorting/BubbleSort" render={props => <BubbleInfo {...props} />} />
+        <Route exact path="/Sorting/CombSort" render={props => <CombInfo {...props} />} />
+        <Route exact path="/Sorting/CycleSort" render={props => <CycleInfo {...props} />} />
+        <Route exact path="/Sorting/GnomeSort" render={props => <GnomeInfo {...props} />} />
+        <Route exact path="/Sorting/HeapSort" render={props => <HeapInfo {...props} />} />
+        <Route exact path="/Sorting/InsertionSort" render={props => <InsertionInfo {...props} />} />
+        <Route exact path="/Sorting/MergeSort" render={props => <MergeInfo {...props} />} />
+        <Route exact path="/Sorting/PigeonHoleSort" render={props => <PigeonHoleInfo {...props} />} />
+        <Route exact path="/Sorting/QuickSort" render={props => <QuickInfo {...props} />} />
+        <Route exact path="/Sorting/RadixSort" render={props => <RadixInfo {...props} />} />
+        <Route exact path="/Sorting/SelectionSort" render={props => <SelectionInfo {...props} />} />
+        <Route exact path="/Sorting/ShellSort" render={props => <ShellInfo {...props} />} />
+        <Route exact path="/Pathfinding/AStar" render={props => <AStarInfo {...props} />} />
+        <Route exact path="/Pathfinding/BFS" render={props => <BFSInfo {...props} />} />
+        <Route exact path="/Pathfinding/DFS" render={props => <DFSInfo {...props} />} />
+        <Route exact path="/Pathfinding/Dijkstra" render={props => <DijkstraInfo {...props} />} />
+        <Route exact path="/DataStructure/Array" render={props => <ArrayInfo {...props} />} />
+        <Route exact path="/DataStructure/SortedSet" render={props => <SSInfo {...props} />} />
+        <Route exact path="/DataStructure/UnsortedSet" render={props => <USInfo {...props} />} />
+        <Route exact path="/DataStructure/SinglyLinkedList" render={props => <SLLInfo {...props} />} />
+        <Route exact path="/DataStructure/DoublyLinkedList" render={props => <DLLInfo {...props} />} />
+        <Route exact path="/DataStructure/Queue" render={props => <QueueInfo {...props} />} />
       </Switch>
-      <div className="shadow">
-        <AppBar position="fixed" color="#cae8f6" elevation="8" className={classes2.appBar}>
-          <Toolbar>
-            <img src={logo} onClick={() => history.push('/')} alt="EduHub" width="150" height="95" />
-            <Button color="inherit" id="btn" onClick={() => history.push('/SignUp')}>Login/Sign Up</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
     </div>
   );
 }

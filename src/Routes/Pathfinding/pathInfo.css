@@ -1,11 +1,11 @@
 .Whole {
   background-color: #eeecec;
+  width: 100%;
 }
 
 .App {
   text-align: center;
-  width: 88%;
-  height: 57%;
+  width: 90%;
   margin: auto;
   margin-top: 3%;
   margin-bottom: 5%;
@@ -29,8 +29,8 @@
 
 .det {
   margin: auto;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 6%;
+  margin-right: 6%;
   font-family: Verdana, Helvetica, sans-serif;
 }
 
@@ -44,7 +44,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   background-color: #282c34;

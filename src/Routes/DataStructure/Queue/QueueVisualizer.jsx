@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Notification from "../Notification.js";
 import "../notification.min.css";
 import { Container, Draggable } from "react-smooth-dnd";
-import { applyDrag, generateItems } from "./utils";
+import { applyDrag, generateItems } from "../utils";
 import { Button, ButtonGroup } from "@material-ui/core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -301,14 +301,14 @@ export default class QueueVisualizer extends React.Component {
     return (
       <div>
         <div>
-          <Button onClick={() => this.resetArray()} id="btn1">
+          <Button onClick={() => this.resetArray()} id="dataMainBtn">
             Generate a new queue
           </Button>
           <input type="number" id="val" name="val" />
-          <Button onClick={() => this.push()} id="btn3">
+          <Button onClick={() => this.push()} id="dataBtn">
             Push
           </Button>
-          <Button onClick={() => this.pop()} id="btn4">
+          <Button onClick={() => this.pop()} id="dataBtn">
             Pop
           </Button>
           <hr></hr>

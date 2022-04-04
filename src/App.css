@@ -2,7 +2,6 @@ body {
   background-color: #eeecec;
 }
 
-
 .shadow {
   display: inline-block;
   background: white;
@@ -28,17 +27,6 @@ body {
   margin-left: 20%;
   margin-right: 20%;
   font-family: Verdana, Helvetica, sans-serif;
-}
-
-#btn {
-  margin-left: auto;
-  color: rgb(0, 0, 0);
-  border: #0f0e0e solid 1px;
-}
-#signup-btn {
-  margin-left: 15px;
-  background-color: #ffbf00;
-  border: #0f0e0e solid 1px;
 }
 
 .App-header {

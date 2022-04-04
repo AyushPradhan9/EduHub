@@ -42,8 +42,8 @@
 }
 
 .codeText {
-  color: #000095;
   font-size: 15px;
+  font-family: "Courier New", monospace;
 }
 
 .App-logo {
