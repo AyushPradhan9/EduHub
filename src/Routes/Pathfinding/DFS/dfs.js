@@ -1,101 +1,41 @@
 export function dfs(grid, startNode, finishNode) {
-    const ol = [];
-    const nulll = [];
-    const vis = [];
-    ol.push(startNode);
-    vis.push(startNode);
-    var cNode = startNode;
-    while (true) {
-        console.log(cNode);
-        if (ol.length === 0) {
-            return nulll;
-        }
-        if (cNode == finishNode) {
-            return vis;
-        }
-        if (ol[ol.length - 1].row < 20) {
-            cNode = grid[ol[ol.length - 1].row + 1][ol[ol.length - 1].col];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].col < 48) {
-            cNode = grid[ol[ol.length - 1].row][ol[ol.length - 1].col + 1];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].row > 0) {
-            cNode = grid[ol[ol.length - 1].row - 1][ol[ol.length - 1].col];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].col > 0) {
-            cNode = grid[ol[ol.length - 1].row][ol[ol.length - 1].col - 1];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        ol.pop();
+    if (!startNode || !finishNode || startNode === finishNode) {
+        return false;
     }
+    let unvisitedNodes = [];
+    let visitedNodesInOrder = [];
+    unvisitedNodes.push(startNode);
+    while (unvisitedNodes.length !== 0) {
+        let closestNode = unvisitedNodes.shift();
+        if (closestNode.isWall) continue;
+        if (closestNode === finishNode) return visitedNodesInOrder;
+        visitedNodesInOrder.push(closestNode);
+        closestNode.isVisited = true;
+        let unvisitedNeighbours = getUnvisitedNeighbours(closestNode, grid);
+        for (let unvisitedNeighbour of unvisitedNeighbours) {
+            unvisitedNeighbour.previousNode = closestNode;
+            unvisitedNodes.unshift(unvisitedNeighbour);
+        }
+    }
+    return visitedNodesInOrder;
 }
 
-export function getNodesInShortestPathOrderDFS(grid, startNode, finishNode) {
-    const ol = [];
-    const nulll = [];
-    const vis = [];
-    ol.push(startNode);
-    vis.push(startNode);
-    var cNode = startNode;
-    while (true) {
-        console.log(cNode);
-        if (ol.length === 0) {
-            return nulll;
-        }
-        if (cNode == finishNode) {
-            return ol;
-        }
-        if (ol[ol.length - 1].row < 20) {
-            cNode = grid[ol[ol.length - 1].row + 1][ol[ol.length - 1].col];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].col < 48) {
-            cNode = grid[ol[ol.length - 1].row][ol[ol.length - 1].col + 1];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].row > 0) {
-            cNode = grid[ol[ol.length - 1].row - 1][ol[ol.length - 1].col];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        if (ol[ol.length - 1].col > 0) {
-            cNode = grid[ol[ol.length - 1].row][ol[ol.length - 1].col - 1];
-            if (!vis.includes(cNode) && !cNode.isWall) {
-                ol.push(cNode);
-                vis.push(cNode);
-                continue;
-            }
-        }
-        ol.pop();
+function getUnvisitedNeighbours(node, grid) {
+    let neighbours = [];
+    let { row, col } = node;
+    if (col !== 0) neighbours.push(grid[row][col - 1]);
+    if (row !== 0) neighbours.push(grid[row - 1][col]);
+    if (col !== grid[0].length - 1) neighbours.push(grid[row][col + 1]);
+    if (row !== grid.length - 1) neighbours.push(grid[row + 1][col]);
+    return neighbours.filter((neighbour) => !neighbour.isVisited);
+}
+
+export function getNodesInShortestPathOrderDFS(finishNode) {
+    let nodesInShortestPathOrder = [];
+    let currentNode = finishNode;
+    while (currentNode !== null) {
+        nodesInShortestPathOrder.unshift(currentNode);
+        currentNode = currentNode.previousNode;
     }
+    return nodesInShortestPathOrder;
 }

@@ -38,6 +38,28 @@
   background-color: white;
 }
 
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(251, 96, 18, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(238, 235, 37, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(198, 255, 119, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 218, 69, 0.75);
+  }
+}
+
 .node-mazecr {
   animation-name: wallCreation;
   animation-duration: 0.0001s;
@@ -74,28 +96,6 @@
   100% {
     transform: scale(1);
     background-color: rgb(12, 53, 71);
-  }
-}
-
-@keyframes visitedAnimation {
-  0% {
-    transform: scale(0.3);
-    background-color: rgba(230, 184, 0, 0.75);
-    border-radius: 100%;
-  }
-
-  50% {
-    background-color: rgba(255, 209, 26, 0.75);
-  }
-
-  75% {
-    transform: scale(1.2);
-    background-color: rgba(255, 255, 0, 0.75);
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: rgba(255, 255, 26, 0.75);
   }
 }
 

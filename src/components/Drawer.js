@@ -1,6 +1,6 @@
 import React from "react";
 import EqualizerIcon from '@mui/icons-material/Equalizer';
-import { Button } from "@mui/material";
+import { Button } from "react-bootstrap";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import StorageIcon from '@mui/icons-material/Storage';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -300,7 +300,7 @@ const Drawer = props => {
           </IconButton>
           <img src={logo} onClick={() => history.push('/')} alt="EduHub" width="110" height="72" />
           <div className="position-absolute mx-4" style={{ right: "0" }}>
-            <Button color="inherit" className="btn btn-outline-dark float-end" type="button" onClick={() => history.push('/Auth')}>Login/Sign Up</Button>
+            <Button variant="dark" type="button" onClick={() => history.push('/Auth')}>Sign In</Button>
           </div>
         </Toolbar>
       </AppBar>

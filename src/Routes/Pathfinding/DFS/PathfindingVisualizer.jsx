@@ -118,15 +118,9 @@ export default class PathfindingVisualizer extends Component {
     const { grid } = this.state;
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
-    for (let i = 0; i <= 20; i++) {
-      for (let j = 0; j <= 39; ++j) {
-        grid[i][j].distance = Infinity;
-      }
-    }
-    const vnio = dfs(grid, startNode, finishNode);
-    console.log(vnio);
-    const sp = getNodesInShortestPathOrderDFS(grid, startNode, finishNode);
-    this.animateDFS(vnio, sp);
+    const visitedNodesInOrder = dfs(grid, startNode, finishNode);
+    const nodesInShortestPathOrder = getNodesInShortestPathOrderDFS(finishNode);
+    this.animateDFS(visitedNodesInOrder, nodesInShortestPathOrder);
   }
 
   resetMaze() {
