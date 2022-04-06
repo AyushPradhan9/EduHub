@@ -1,5 +1,6 @@
 .Whole {
   background-color: #eeecec;
+  width: 100%;
 }
 
 .App {
@@ -27,16 +28,15 @@
 }
 
 .det {
-  margin: auto;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 6%;
+  margin-right: 6%;
+  width: 100%;
   font-family: Verdana, Helvetica, sans-serif;
 }
 
 .codeBlock {
   background-color: white;
-  border-style: solid;
-  border-color: grey;
+  border: 2px solid rgb(12, 53, 71);
   padding: 20px;
   margin-top: 20px;
 }
@@ -44,6 +44,7 @@
 .codeText {
   font-size: 15px;
   font-family: "Courier New", monospace;
+  color: black;
 }
 
 .App-logo {

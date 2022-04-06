@@ -4,7 +4,7 @@ import { Button, Slider } from "@material-ui/core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import "../visualizer.css";
+import "../sortingVisualizer.css";
 
 const marks = [
   {
@@ -138,7 +138,7 @@ export default class VisualizeComb extends React.Component {
           <Button
             onClick={() => this.resetArray()}
             disabled={this.state.disabled}
-            id="btn1"
+            id="sortBtn"
           >
             New array
           </Button>
@@ -147,11 +147,10 @@ export default class VisualizeComb extends React.Component {
             value={this.state.abar}
             onChange={handleChange}
             aria-labelledby="continuous-slider"
-            valueLabelDisplay="on"
+            valueLabelDisplay="auto"
             min={4}
             max={20}
             id="slid1"
-            valueLabelDisplay="auto"
             disabled={this.state.disabled}
           />
           <a>Speed:</a>
@@ -159,7 +158,7 @@ export default class VisualizeComb extends React.Component {
             value={this.state.speed}
             onChange={speedChange}
             aria-labelledby="continuous-slider"
-            valueLabelDisplay="off"
+            valueLabelDisplay="no"
             min={1}
             max={10}
             id="slid2"
@@ -169,7 +168,7 @@ export default class VisualizeComb extends React.Component {
           <Button
             disabled={this.state.disabled}
             onClick={() => this.startSorting()}
-            id="btn2"
+            id="sortMainBtn"
           >
             Run Sorting
           </Button>
