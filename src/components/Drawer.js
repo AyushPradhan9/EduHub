@@ -314,7 +314,7 @@ const Drawer = props => {
             )}
           </IconButton>
         </DrawerHeader>
-        <List>
+        <List sx={{ height: "300vh" }}>
           <Divider />
           {itemsList.map((item, index) => {
             const { text, icon, onClick } = item;
@@ -339,13 +339,14 @@ const Drawer = props => {
                         );
                       })}
                     </List>
+                    <Divider />
                   </Collapse>
                 </>
               );
             }
             else if (text === "Path Finding") {
               return (
-                <>
+                <div style={{ marginBottom: "44px" }}>
                   <ListItem width="50%" button key={text} onClick={onClick}>
                     {icon && <ListItemIcon>{icon}</ListItemIcon>}
                     <ListItemText primary={text} />
@@ -364,8 +365,9 @@ const Drawer = props => {
                         );
                       })}
                     </List>
+                    <Divider />
                   </Collapse>
-                </>
+                </div>
               );
             }
             else if (text === "Data Structures") {
@@ -389,6 +391,7 @@ const Drawer = props => {
                         );
                       })}
                     </List>
+                    <Divider />
                   </Collapse>
                 </>
               );
@@ -405,14 +408,14 @@ const Drawer = props => {
               );
             }
           })}
+          <div className="position-absolute w-100" style={{ bottom: "0", left: "0" }}>
+            <Divider />
+            <ListItem width="50%" button key="Account" onClick={() => history.push("/Auth")}>
+              <ListItemIcon ><AccountCircleIcon style={{ color: '#0b132f' }} fontSize="large" /></ListItemIcon>
+              <ListItemText primary={"Account"} />
+            </ListItem>
+          </div>
         </List>
-        <div className="position-absolute overflow-scroll w-100" style={{ bottom: "0" }}>
-          <Divider />
-          <ListItem width="50%" button key="Account" onClick={() => history.push("/Auth")}>
-            <ListItemIcon ><AccountCircleIcon style={{ color: '#0b132f' }} fontSize="large" /></ListItemIcon>
-            <ListItemText primary={"Account"} />
-          </ListItem>
-        </div>
       </CustomDrawer>
     </Box>
   );
