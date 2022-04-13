@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import GoogleLogin from "./Google/Login";
-import MetaLogin from "./Facebook/Login";
+import RegisterForm from "./RegistrationForm";
+import LoginForm from "./LoginForm";
 import "./Auth.css";
 
-import { GoogleLoginButton, FacebookLoginButton, GithubLoginButton, LinkedInLoginButton } from "react-social-login-buttons";
-
-function Auth() {
+const Auth = ({ setUserName, setEmail, setPassword }) => {
   const [registrationFormStatus, setRegistartionFormStatus] = useState(false);
+
   const loginProps = useSpring({
     left: registrationFormStatus ? -600 : 0, // Login form sliding positions
   });
@@ -36,7 +35,7 @@ function Auth() {
     <div className="maincontainer">
       <div className="container">
         <div className="login-register-wrapper">
-          <div className="nav-buttons">
+          <div className="nav-buttons text-center">
             <animated.button
               onClick={loginClicked}
               id="loginBtn"
@@ -54,63 +53,16 @@ function Auth() {
           </div>
           <div className="form-group">
             <animated.form action="" id="loginform" style={loginProps}>
-              <LoginForm />
+              <LoginForm setUserName={setUserName} setEmail={setEmail} setPassword={setPassword} />
             </animated.form>
             <animated.form action="" id="registerform" style={registerProps}>
               <RegisterForm />
             </animated.form>
           </div>
-          <animated.div className="forgot-panel" style={loginProps}>
-            <a herf="#">Forgot your password</a>
-          </animated.div>
+          <animated.div className="forgot-panel" style={loginProps} />
         </div>
       </div>
     </div>
-  );
-}
-
-function LoginForm() {
-  return (
-    <React.Fragment>
-      <label for="username">USERNAME</label>
-      <input type="text" id="username" />
-      <label for="password">PASSWORD</label>
-      <input type="text" id="password" />
-      <input type="submit" value="submit" className="submit" />
-      <div className="container-fluid login-options">
-        <div className="row">
-          <div className="col-6">
-            <GoogleLogin />
-          </div>
-          <div className="col-6">
-            <MetaLogin />
-            {/* <FacebookLoginButton size='40px' align="center" preventActiveStyles={true} style={{ width: 200, fontSize: '1em', marginRight: 5 }} /> */}
-          </div>
-          <div className="col-6">
-            <GithubLoginButton />
-          </div>
-          <div className="col-6">
-            <LinkedInLoginButton />
-          </div>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-}
-
-function RegisterForm() {
-  return (
-    <React.Fragment>
-      <label for="fullname">full name</label>
-      <input type="text" id="fullname" />
-      <label for="email">email</label>
-      <input type="text" id="email" />
-      <label for="password">password</label>
-      <input type="text" id="password" />
-      <label for="confirmpassword">confirm password</label>
-      <input type="text" id="confirmpassword" />
-      <input type="submit" value="submit" class="submit" />
-    </React.Fragment>
   );
 }
 

@@ -3,20 +3,25 @@
   font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: auto;
-  margin-top: 95px;
+  margin-top: 35px;
   color: inherit;
   background-color: inherit;
 }
 
 .container {
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
+}
+
+.authLogo {
+  height: 110px;
+  margin: 35px auto;
 }
 
 .login-register-wrapper {
-  height: 660px;
-  width: 600px;
+  height: 95%;
+  width: 50%;
+  min-width: 500px;
+  min-height: 550px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2em;
@@ -24,17 +29,7 @@
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   color: #ffffff;
-  background: #171717; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #f2fcfe,
-    #171717
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f2fcfe,
-    #171717
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0a2f3e;
 }
 
 /* Nav buttons */
@@ -43,7 +38,6 @@
   height: 100px;
   padding-top: 30px;
   opacity: 1;
-  margin-bottom: 1em;
 }
 #loginBtn,
 #registerBtn {
@@ -69,8 +63,7 @@
 .forgot-panel {
   position: relative;
   height: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   text-align: center;
   padding-top: 24px;
   border-top: solid 1px rgba(255, 255, 255, 0.3);
@@ -81,13 +74,13 @@
   height: 660px;
 }
 .form-group input {
+  font-family: Arial, FontAwesome;
   width: 100%;
-  height: 35px;
+  height: 40px;
   padding-left: 15px;
   border: none;
   border-radius: 5px;
-  margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 .form-group label {
   text-transform: uppercase;
@@ -95,20 +88,14 @@
   padding: 0;
   border: none;
 }
-input.submit {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1em;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  padding: 8px 0px;
+
+#formSubmit {
+  margin: auto;
+  margin-top: 10px;
   width: 50%;
-  height: 35px;
-  border: none;
-  border-radius: 20px;
-  margin-top: 23px;
-  margin-left: 140px;
-  background-color: #333333;
+  background-color: #ffbf00;
+  border: 2px solid rgb(12, 53, 71);
+  height: 40px;
 }
 
 /*Form positioning and animation */
@@ -120,8 +107,8 @@ form#registerform {
 }
 
 .forgot-panel {
-  margin-top: -230px;
-  color: rgb(97, 96, 96);
+  margin-top: -300px;
+  color: white;
 }
 
 form,

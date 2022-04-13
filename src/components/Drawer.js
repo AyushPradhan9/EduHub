@@ -1,6 +1,6 @@
 import React from "react";
 import EqualizerIcon from '@mui/icons-material/Equalizer';
-import { Button } from "react-bootstrap";
+import { Button } from "@material-ui/core";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import StorageIcon from '@mui/icons-material/Storage';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -27,6 +27,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import logo from "../assets/EduhubLogo1.jpg";
+import Swal from "sweetalert2";
 
 const drawerWidth = 230;
 
@@ -102,6 +103,10 @@ const Drawer = props => {
   const [expandSort, setExpandSort] = React.useState(false);
   const [expandDs, setExpandDs] = React.useState(false);
   const [expandPath, setExpandPath] = React.useState(false);
+  const userName = props.userName;
+  const email = props.email;
+  const password = props.password;
+  const AccountName = userName !== "" ? userName : "Account";
 
   const handleSort = () => {
     setExpandSort(!expandSort);
@@ -281,6 +286,28 @@ const Drawer = props => {
     },
   ]
 
+  const accountRedirect = () => {
+    if (userName === "") {
+      history.push("/Auth");
+    }
+  }
+
+  const signOut = () => {
+    props.setUserName("");
+    props.setPassword("");
+    props.setEmail("");
+    Swal.fire({
+      icon: 'success',
+      text: "Logout Successful",
+      imageWidth: 100,
+      imageHeight: 100,
+      width: 350,
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 2000
+    });
+  }
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -300,7 +327,10 @@ const Drawer = props => {
           </IconButton>
           <img src={logo} onClick={() => history.push('/')} alt="EduHub" width="110" height="72" />
           <div className="position-absolute mx-4" style={{ right: "0" }}>
-            <Button variant="dark" type="button" onClick={() => history.push('/Auth')}>Sign In</Button>
+            {userName === "" && email === "" && password === "" &&
+              <Button id="signBtn" onClick={() => history.push('/Auth')}>Sign In</Button>}
+            {userName !== "" && email !== "" && password !== "" &&
+              <Button id="logOutBtn" onClick={signOut}>Log Out</Button>}
           </div>
         </Toolbar>
       </AppBar>
@@ -410,14 +440,14 @@ const Drawer = props => {
           })}
           <div className="position-absolute w-100" style={{ bottom: "0", left: "0" }}>
             <Divider />
-            <ListItem width="50%" button key="Account" onClick={() => history.push("/Auth")}>
+            <ListItem width="50%" button key="Account" onClick={accountRedirect}>
               <ListItemIcon ><AccountCircleIcon style={{ color: '#0b132f' }} fontSize="large" /></ListItemIcon>
-              <ListItemText primary={"Account"} />
+              <ListItemText primary={AccountName} />
             </ListItem>
           </div>
         </List>
       </CustomDrawer>
-    </Box>
+    </Box >
   );
 };
 

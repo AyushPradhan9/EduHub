@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home.js";
 import Auth from './components/auth/Auth.js';
@@ -25,49 +25,34 @@ import USInfo from "./routes/DataStructure/UnsortedSet/USInfo";
 import SLLInfo from "./routes/DataStructure/SinglyLinkedList/SLLInfo";
 import DLLInfo from "./routes/DataStructure/DoublyLinkedList/DLLInfo";
 import QueueInfo from "./routes/DataStructure/Queue/QueueInfo";
-import { Route, Switch } from "react-router-dom";
 import Drawer from "./components/Drawer";
 import { makeStyles } from "@material-ui/core/styles";
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const useStyles = makeStyles({
   container: {
-    display: "flex"
+    display: "flex",
+    height: "100%",
+    marginTop: 72
   }
 });
 
-const useStyles2 = makeStyles((theme) => ({
-  root: {
-    paddingLeft: 300
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
-  title: {
-    marginRight: "auto"
-  },
-  drawer: {
-    width: 300,
-    zIndex: theme.zIndex.appBar - 1,
-  },
-  content: {
-    padding: theme.spacing(3)
-  }
-}));
-
-
 export default function App() {
   const classes = useStyles();
-  const classes2 = useStyles2();
-  const [open, setOpen] = useState(false);
-  const trigger = useScrollTrigger();
-  const history = useHistory();
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className={classes.container}>
-      <Drawer />
+      <Drawer setUserName={setUserName} setEmail={setEmail} setPassword={setPassword}
+        userName={userName} email={email} password={password} />
       <Switch>
         <Route exact from="/" component={Home} />
-        <Route exact from="/Auth" component={Auth} />
+        <Route exact from="/Auth" >
+          {userName === "" && email === "" && password === "" &&
+            <Auth setUserName={setUserName} setEmail={setEmail} setPassword={setPassword} />
+          }
+        </Route>
         <Route exact path="/Sorting/BubbleSort" render={props => <BubbleInfo {...props} />} />
         <Route exact path="/Sorting/CombSort" render={props => <CombInfo {...props} />} />
         <Route exact path="/Sorting/CycleSort" render={props => <CycleInfo {...props} />} />
@@ -94,4 +79,3 @@ export default function App() {
     </div>
   );
 }
-

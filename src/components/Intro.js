@@ -167,7 +167,7 @@ class Intro extends React.Component {
                         <h2 className="w-title">Path Finding Algorithms</h2>
                         <div className="w-more">
                           <span className="w-ctegory">
-                            Astar, DFS, BFS
+                            Astar, BFS, DFS and Dijkstra
                           </span>{" "}
                         </div>
                       </div>
