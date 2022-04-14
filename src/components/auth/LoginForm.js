@@ -69,7 +69,7 @@ const LoginForm = ({ setUserName, setEmail, setPassword }) => {
             <Container>
                 <Col>
                     <Row>
-                        <img src={logo} className="authLogo" />
+                        <img src={logo} alt="Eduhub" className="authLogo" />
                     </Row>
                     <Row>
                         <input type="email" name="email" value={user.email ? user.email : ""}

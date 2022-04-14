@@ -1,15 +1,19 @@
 import React from "react";
 import './styles/Intro.css';
-import logo from "../assets/EduhubLogo.jpg";
 import sort_img from '../assets/sort_img.png';
 import path_img from '../assets/pf1.png';
-import data_img from '../assets/ds2.png';
+import data_img from '../assets/ds.png';
 import array from "../assets/Array.jpg";
 import sll from "../assets/SLL.jpg";
 import dll from "../assets/DLL.jpg";
 import oset from "../assets/Ordered_Set.jpg";
 import uset from "../assets/Unordered_Set.jpg";
+import sav from "../assets/SAV.jpg"
 import queue from "../assets/Queue.jpg";
+import astar from "../assets/Astar.jpg";
+import bfs from "../assets/BFS.jpg";
+import dfs from "../assets/DFS.jpg";
+import dijkstra from "../assets/Dijkstra.jpg";
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'jquery/dist/jquery.min.js';
@@ -95,7 +99,7 @@ class Intro extends React.Component {
             </div>
             <div className="col-md-4">
               <div className="work-box">
-                <a href={sort_img} data-lightbox="gallery-vmarine">
+                <a href={sav} data-lightbox="gallery-vmarine" data-title="Sorting Algorithm Visualizer">
                   <div className="work-img">
                     <img src={sort_img} alt="" className="img-fluid" />
                   </div>
@@ -112,52 +116,11 @@ class Intro extends React.Component {
                     </div>
                   </div>
                 </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-vmarine"
-
-                  style={{ display: "none" }}
-                  data-title="Selection Sort"
-                  albumLabel="sorting"
-                  disableScrolling={true}
-                  showImageNumberLabel={false}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-vmarine"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-vmarine"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-vmarine"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-vmarine"
-                  style={{ display: "none" }}
-                  wrapAround={true}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="work-box">
-                <a href={logo} data-lightbox="gallery-aguadeluz">
+                <a href={astar} data-lightbox="gallery-aguadeluz" data-title="Astar Algorithm">
                   <div className="work-img">
                     <img src={path_img} alt="" className="img-fluid" />
                   </div>
@@ -175,35 +138,24 @@ class Intro extends React.Component {
                   </div>
                 </a>
                 <a
-                  href={logo}
+                  href={bfs}
+                  data-lightbox="gallery-aguadeluz"
+                  data-title="Breadth First Search Algorithm"
+                  style={{ display: "none" }}
+                >
+                  jsx-a11y/anchor-has-content warning
+                </a>
+                <a
+                  href={dfs}
+                  data-title="Depth First Search Algorithm"
                   data-lightbox="gallery-aguadeluz"
                   style={{ display: "none" }}
                 >
                   jsx-a11y/anchor-has-content warning
                 </a>
                 <a
-                  href={logo}
-                  data-lightbox="gallery-aguadeluz"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-aguadeluz"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
-                  data-lightbox="gallery-aguadeluz"
-                  style={{ display: "none" }}
-                >
-                  jsx-a11y/anchor-has-content warning
-                </a>
-                <a
-                  href={logo}
+                  href={dijkstra}
+                  data-title="Dijkstra Algorithm"
                   data-lightbox="gallery-aguadeluz"
                   style={{ display: "none" }}
                 >

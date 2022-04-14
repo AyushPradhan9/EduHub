@@ -1,10 +1,9 @@
-import React, { Component, useState, useRef } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import Notification from "../Notification.js";
 import "../notification.min.css";
 import { Container, Draggable } from "react-smooth-dnd";
 import { applyDrag, generateItems } from "../utils";
-import { Button, ButtonGroup } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
@@ -59,7 +58,6 @@ export default class DLLVisualizer extends React.Component {
     this.setState({ array });
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
-      console.log(arrayBar[i]);
       if (!arrayBar[i]) {
         continue;
       } else {
@@ -126,7 +124,6 @@ export default class DLLVisualizer extends React.Component {
         continue;
       }
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     this.state.abar = parseInt(this.state.abar) - parseInt(count);
     ac = array;
@@ -171,7 +168,6 @@ export default class DLLVisualizer extends React.Component {
     }
     for (let i = 0; i < this.state.abar - 1; i++) {
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     this.state.abar = parseInt(this.state.abar) - parseInt(1);
     ac = array;
@@ -182,7 +178,6 @@ export default class DLLVisualizer extends React.Component {
     }));
     this.state.items3 = x;
     this.setState({ array });
-    console.log(this.state.abar);
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
       if (!arrayBar[i]) {
@@ -247,7 +242,6 @@ export default class DLLVisualizer extends React.Component {
     }
     for (let i = 0; i < this.state.abar; i++) {
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     array.push(parseInt(x));
     this.state.abar = parseInt(this.state.abar) + parseInt(1);
@@ -259,10 +253,8 @@ export default class DLLVisualizer extends React.Component {
     }));
     this.state.items3 = x;
     this.setState({ array });
-    console.log(this.state.abar);
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
-      console.log(arrayBar[i]);
       if (!arrayBar[i]) {
         continue;
       } else {

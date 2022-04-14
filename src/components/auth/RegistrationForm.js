@@ -115,23 +115,23 @@ export default function RegisterForm() {
             <Container>
                 <Col>
                     <Row>
-                        <img src={logo} className="authLogo" />
+                        <img src={logo} alt="Eduhub" className="authLogo" />
                     </Row>
                     <Row>
                         <input type="text" name="name" value={user.name}
-                            onChange={handleChange} maxlength="50" placeholder="&#xf007;  Full Name" />
+                            onChange={handleChange} maxLength="50" placeholder="&#xf007;  Full Name" />
                     </Row>
                     <Row>
                         <input type="email" name="email" value={user.email}
-                            onChange={handleChange} maxlength="50" placeholder="&#xf0e0;  E-mail" />
+                            onChange={handleChange} maxLength="50" placeholder="&#xf0e0;  E-mail" />
                     </Row>
                     <Row>
                         <input type="password" name="password" value={user.password}
-                            onChange={handleChange} maxlength="50" placeholder="&#xf023;  Password" />
+                            onChange={handleChange} maxLength="50" placeholder="&#xf023;  Password" />
                     </Row>
                     <Row>
                         <input type="password" name="reEnterPassword" value={user.reEnterPassword}
-                            onChange={handleChange} maxlength="50" placeholder="&#xf023;  Re-enter Password" />
+                            onChange={handleChange} maxLength="50" placeholder="&#xf023;  Re-enter Password" />
                     </Row>
                     <Row className="m-auto">
                         <Button onClick={register} className="submit" id="formSubmit">SignUp</Button>

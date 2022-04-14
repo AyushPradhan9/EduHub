@@ -1,10 +1,9 @@
-import React, { Component, useState, useRef } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import Notification from "../Notification.js";
 import "../notification.min.css";
 import { Container, Draggable } from "react-smooth-dnd";
 import { applyDrag, generateItems } from "../utils";
-import { Button, ButtonGroup } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";

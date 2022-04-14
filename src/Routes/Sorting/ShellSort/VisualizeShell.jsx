@@ -74,7 +74,6 @@ export default class VisualizeShell extends React.Component {
     }
     var vl = document.getElementById("x");
     vl.style.width = this.state.abar * 36 + 80 + "px";
-    console.log(array);
   }
 
   shellSort() {
@@ -115,14 +114,12 @@ export default class VisualizeShell extends React.Component {
     const { array } = this.state;
 
     const handleChange = (event, newValue) => {
-      console.log(event);
       this.state.abar = newValue;
       this.setState();
       this.resetArray();
     };
 
     const speedChange = (e, newValue) => {
-      console.log(e);
       let obj = {};
       obj[e.target.name] = e.target.value;
       this.state.speed = newValue;

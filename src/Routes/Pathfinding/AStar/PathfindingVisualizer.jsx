@@ -292,7 +292,6 @@ export default class PathfindingVisualizer extends Component {
                     count > 0
                   ) {
                     let ch = randomIntFromInterval(0, 2);
-                    console.log(ch);
                     if (ch === 1) {
                       const newGrid = getNewGridWithWallToggledOn(
                         this.state.grid,
@@ -477,7 +476,6 @@ export default class PathfindingVisualizer extends Component {
                 {row.map((node, nodeIdx) => {
                   const { row, col, isFinish, isStart, isWall } = node;
                   if (row === 0 || row === 20 || col === 0 || col === 39) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -506,7 +504,6 @@ export default class PathfindingVisualizer extends Component {
                       ></Node>
                     );
                   } else if (col % 4 === 0 && row !== 19) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -535,7 +532,6 @@ export default class PathfindingVisualizer extends Component {
                       ></Node>
                     );
                   } else if (col % 2 === 0 && col % 4 !== 0 && row !== 1) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -567,7 +563,6 @@ export default class PathfindingVisualizer extends Component {
                     row === START_NODE_ROW &&
                     (col === START_NODE_COL || col === FINISH_NODE_COL)
                   ) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOff(
                       this.state.grid,
                       row,
@@ -645,7 +640,6 @@ export default class PathfindingVisualizer extends Component {
                 {row.map((node, nodeIdx) => {
                   const { row, col, isFinish, isStart, isWall } = node;
                   if (row === 0 || row === 20 || col === 0 || col === 39) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -674,7 +668,6 @@ export default class PathfindingVisualizer extends Component {
                       ></Node>
                     );
                   } else if (row % 4 === 0 && col !== 38) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -703,7 +696,6 @@ export default class PathfindingVisualizer extends Component {
                       ></Node>
                     );
                   } else if (row % 2 === 0 && row % 4 !== 0 && col !== 1) {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOn(
                       this.state.grid,
                       row,
@@ -732,7 +724,6 @@ export default class PathfindingVisualizer extends Component {
                       ></Node>
                     );
                   } else {
-                    console.log(col);
                     const newGrid = getNewGridWithWallToggledOff(
                       this.state.grid,
                       row,
