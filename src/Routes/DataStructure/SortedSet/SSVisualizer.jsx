@@ -68,7 +68,6 @@ export default class SSVisualizer extends React.Component {
     this.setState({ array });
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
-      console.log(arrayBar[i]);
       if (!arrayBar[i]) {
         continue;
       } else {
@@ -135,7 +134,6 @@ export default class SSVisualizer extends React.Component {
         continue;
       }
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     this.state.abar = parseInt(this.state.abar) - parseInt(count);
     ac = array;
@@ -180,7 +178,6 @@ export default class SSVisualizer extends React.Component {
     }
     for (let i = 0; i < this.state.abar - 1; i++) {
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     this.state.abar = parseInt(this.state.abar) - parseInt(1);
     ac = array;
@@ -191,7 +188,6 @@ export default class SSVisualizer extends React.Component {
     }));
     this.state.items3 = x;
     this.setState({ array });
-    console.log(this.state.abar);
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
       if (!arrayBar[i]) {
@@ -257,7 +253,6 @@ export default class SSVisualizer extends React.Component {
 
     for (let i = 0; i < this.state.abar; i++) {
       array.push(this.state.array[i]);
-      console.log(array[i]);
     }
     if (array.includes(parseInt(x))) {
       window.notification = new Notification();
@@ -288,7 +283,6 @@ export default class SSVisualizer extends React.Component {
     }));
     this.state.items3 = x;
     this.setState({ array });
-    console.log(this.state.abar);
     const arrayBar = document.getElementsByClassName(this.state.cn);
     for (let i = 0; i < array.length; i++) {
       if (!arrayBar[i]) {
