@@ -75,16 +75,6 @@ const Login = ({ setUserName, setEmail, setPassword }) => {
     }
 
     const onFailure = (response) => {
-        Swal.fire({
-            icon: 'error',
-            text: "Failed to Login with Google",
-            imageWidth: 100,
-            imageHeight: 100,
-            width: 350,
-            showConfirmButton: false,
-            showCloseButton: true,
-            timer: 2000
-        });
     };
 
     return (
