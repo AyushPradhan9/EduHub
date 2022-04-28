@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/EduHub/static/css/main.b20c63a8.chunk.css",
+    "main.js": "/EduHub/static/js/main.61e097e2.chunk.js",
+    "main.js.map": "/EduHub/static/js/main.61e097e2.chunk.js.map",
+    "runtime-main.js": "/EduHub/static/js/runtime-main.4f9415ac.js",
+    "runtime-main.js.map": "/EduHub/static/js/runtime-main.4f9415ac.js.map",
+    "static/css/2.37b781f8.chunk.css": "/EduHub/static/css/2.37b781f8.chunk.css",
+    "static/js/2.d118284d.chunk.js": "/EduHub/static/js/2.d118284d.chunk.js",
+    "static/js/2.d118284d.chunk.js.map": "/EduHub/static/js/2.d118284d.chunk.js.map",
+    "index.html": "/EduHub/index.html",
+    "static/css/2.37b781f8.chunk.css.map": "/EduHub/static/css/2.37b781f8.chunk.css.map",
+    "static/css/main.b20c63a8.chunk.css.map": "/EduHub/static/css/main.b20c63a8.chunk.css.map",
+    "static/js/2.d118284d.chunk.js.LICENSE.txt": "/EduHub/static/js/2.d118284d.chunk.js.LICENSE.txt",
+    "static/media/Array.3d14742d.jpg": "/EduHub/static/media/Array.3d14742d.jpg",
+    "static/media/Astar.dc71c517.jpg": "/EduHub/static/media/Astar.dc71c517.jpg",
+    "static/media/BFS.911ac999.jpg": "/EduHub/static/media/BFS.911ac999.jpg",
+    "static/media/DFS.b5376513.jpg": "/EduHub/static/media/DFS.b5376513.jpg",
+    "static/media/DLL.d02df974.jpg": "/EduHub/static/media/DLL.d02df974.jpg",
+    "static/media/Dijkstra.a65e5789.jpg": "/EduHub/static/media/Dijkstra.a65e5789.jpg",
+    "static/media/EduhubLogo.6029466a.png": "/EduHub/static/media/EduhubLogo.6029466a.png",
+    "static/media/EduhubLogo1.49e4716a.png": "/EduHub/static/media/EduhubLogo1.49e4716a.png",
+    "static/media/EduhubLogo1.5c9e681a.jpg": "/EduHub/static/media/EduhubLogo1.5c9e681a.jpg",
+    "static/media/Ordered_Set.83043eb3.jpg": "/EduHub/static/media/Ordered_Set.83043eb3.jpg",
+    "static/media/Queue.6c3eecb3.jpg": "/EduHub/static/media/Queue.6c3eecb3.jpg",
+    "static/media/SAV.0f36e5fa.jpg": "/EduHub/static/media/SAV.0f36e5fa.jpg",
+    "static/media/SLL.8340f13d.jpg": "/EduHub/static/media/SLL.8340f13d.jpg",
+    "static/media/Unordered_Set.fa496e51.jpg": "/EduHub/static/media/Unordered_Set.fa496e51.jpg",
+    "static/media/mdb.css": "/EduHub/static/media/arrow_right.f7c6ac6d.svg",
+    "static/media/ds.88272de6.png": "/EduHub/static/media/ds.88272de6.png",
+    "static/media/all.min.css": "/EduHub/static/media/fa-solid-900.efbd5d20.eot",
+    "static/media/pf1.88f9cb5b.png": "/EduHub/static/media/pf1.88f9cb5b.png",
+    "static/media/sort_img.26098497.png": "/EduHub/static/media/sort_img.26098497.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f9415ac.js",
+    "static/css/2.37b781f8.chunk.css",
+    "static/js/2.d118284d.chunk.js",
+    "static/css/main.b20c63a8.chunk.css",
+    "static/js/main.61e097e2.chunk.js"
+  ]
+}
